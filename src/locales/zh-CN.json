@@ -124,7 +124,7 @@
     "photosOfflineHint": "最近浏览的 {size} 照片，可供离线查看",
     "diskRoomHint": "当前最多使用 {size}，以为磁盘预留空间。",
     "keptOnComputer": "已在此电脑上保留 {size}",
-    "zeroKB": "零 KB",
+    "zeroKB": "0 KB",
     "general": "通用",
     "appearance": "外观",
     "auto": "自动",
@@ -802,7 +802,7 @@
     "location": "位置",
     "whenMessaging": "发信息时",
     "messaging": "信息：",
-    "attachedPicture": "附加的图片",
+    "attachedPicture": "附加图片",
     "listToAddTo": "添加到的列表",
     "newReminderAria": "新提醒事项",
     "monthsOfYear": "一年中的月份",
@@ -866,7 +866,7 @@
     "positionN": "第 {n} 个{weekday}",
     "positionLast": "最后一个{weekday}",
     "alerts": {
-      "atTime": "日程发生时",
+      "atTime": "日程开始时",
       "m5": "5 分钟前",
       "m15": "15 分钟前",
       "m30": "30 分钟前",
@@ -1310,8 +1310,8 @@
     "nowChanged": "更改了 {items}",
     "nowRemoved": "移除了 {items}",
     "nowHolds": "此文件夹现在包含 {items}",
-    "nowChangedSince": "{holds}，自在此显示以来已在另一台设备上{said}。它将连同其中的所有内容一起移到“最近删除”。",
-    "nowChangedPlain": "{holds}。自在此显示以来，它已在另一台设备上被更改。它将连同其中的所有内容一起移到“最近删除”。"
+    "nowChangedSince": "自此处显示后，已在另一台设备上{said}。{holds}，它将连同其中的所有内容一起移到“最近删除”。",
+    "nowChangedPlain": "{holds}。自此处显示后，它已在另一台设备上被更改。它将连同其中的所有内容一起移到“最近删除”。"
   },
   "shortcuts": {
     "title": "键盘快捷键",
@@ -1553,7 +1553,7 @@
     "info": "简介",
     "infoI": "简介（I）",
     "itWillBeDeletedFromAllYourDevices": "它将从你的所有设备上删除。",
-    "itsCalendarsLeaveThisComputerNothingIsDeletedOnT": "它的日历将从这台电脑上移除。服务器上的内容不会被删除，你可以随时重新添加此账户。",
+    "itsCalendarsLeaveThisComputerNothingIsDeletedOnT": "该账户的日历将从这台电脑上移除。服务器上的内容不会被删除，你可以随时重新添加此账户。",
     "itsEventsLeaveThisComputerYouCanSubscribeAgainAt": "它的日程将从这台电脑上移除。你可以随时重新订阅。",
     "library": "图库",
     "licences": "许可证",
