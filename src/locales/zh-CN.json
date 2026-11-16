@@ -124,7 +124,7 @@
     "photosOfflineHint": "最近浏览的 {size} 照片，可供离线查看",
     "diskRoomHint": "当前最多使用 {size}，以为磁盘预留空间。",
     "keptOnComputer": "已在此电脑上保留 {size}",
-    "zeroKB": "零 KB",
+    "zeroKB": "0 KB",
     "general": "通用",
     "appearance": "外观",
     "auto": "自动",
