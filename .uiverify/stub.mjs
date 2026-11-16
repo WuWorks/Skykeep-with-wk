@@ -1286,7 +1286,6 @@ export function installStub({ screen, services, twoFactor, calendarFixture, note
         // The desktop's Increase Contrast, from the Settings portal (appearance.rs).
         case "system_contrast":  return window.__contrast ?? false;
         // LC_TIME, LANG (appearance.rs): null leaves the engine's own language.
-        case "system_time_locale": return window.__timeLocale ?? null;
         case "network_reach": return { accounts: window.__reachAccounts ?? [], apple: ["apple.com", "icloud.com", "icloud-content.com"], subscribed: window.__reachSubscribed ?? [],
           updates: (window.__update?.install ?? "here") === "here" ? ["github.com", "release-assets.githubusercontent.com", "objects.githubusercontent.com"] : [] };
         // Skykeep's own updates (updates.rs). A test sets `window.__update` (an offer, an install
@@ -1336,6 +1335,10 @@ export function installStub({ screen, services, twoFactor, calendarFixture, note
         }
         // One refresh covers every service, so there is one command to stub rather than
         // a pair per screen.
+        // Part of the library refreshed (a screen opened stale): nothing new to report. Without
+        // it a stale screen showed "unstubbed command: sync_some" in its sidebar (README shots).
+        case "sync_some":
+          return { services: [], asOf: null, tookMs: 0 };
         case "sync_all":
         case "sync_status":
           return {
@@ -1460,6 +1463,12 @@ export async function openScreen(page, name) {
 }
 
 /* Settings: Skykeep's own window, the address with no app (docs/apps-as-windows.md). */
+/* One of Settings' sections, from its sidebar ("This Computer", "Backup", …; Home is the account). */
+export async function openPane(page, name) {
+  await page.getByRole("tab", { name, exact: true }).click();
+  await page.locator(".prefs-pane:not([hidden])").first().waitFor();
+}
+
 export async function openSettings(page) {
   const url = new URL(page.url());
   if (url.searchParams.get("app")) {
